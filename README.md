@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This site showcases my skills, education, projects, and contact information in an interactive and visually appealing way.
 
 ## 🌐 Live Demo
-[Click here to view the live site](https://portfolio-2syl.vercel.app/)
+[Click here to view the live site](https://portfolio-1sr6.vercel.app/)
 
 ## 📂 Project Structure
 ```
