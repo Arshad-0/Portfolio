@@ -1,0 +1,349 @@
+/** Head Section  **/
+:root {
+    --primary-color: #6A0DAD; /* Purple */
+    --secondary-color: #00D4FF; /* Cyan */
+    --background-color: #121212; /* Dark */
+    --text-color: #EAEAEA; /* Light Gray */
+}
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-custom {
+    background: var(--secondary-color);
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn-custom:hover {
+    background: var(--primary-color);
+    color: white;
+}
+.card {
+    background: #1E1E1E;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 212, 255, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+.photo-animation {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease-in-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.photo-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.skill-buttons button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 5px;
+    transition: 0.3s;
+}
+.skill-buttons button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Home Section */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px cyan; }
+            50% { text-shadow: 0 0 15px cyan; }
+            100% { text-shadow: 0 0 10px cyan; }
+        }
+
+        .animate-glow {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .nav-link {
+            color: white;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: cyan;
+            transition: width 0.3s ease-in-out;
+            margin: auto;
+        }
+
+        .nav-link:hover {
+            color: cyan;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .info-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+        }
+
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 255, 255, 0.4);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px cyan; }
+            50% { text-shadow: 0 0 15px cyan; }
+            100% { text-shadow: 0 0 10px cyan; }
+        }
+
+        .animate-glow {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes imageBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-image {
+            animation: imageBounce 2s infinite ease-in-out;
+        }
+
+        /* Education */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-pulse {
+        animation: pulse 1.5s infinite;
+    }
+
+    .education-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        padding: 24px;
+        text-align: left;
+    }
+
+    .education-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    /* Skills */
+    /* Add Tailwind CSS animation classes */
+    .animated-btn {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .animated-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Projects */
+    /* Project Card */
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .project-card:hover {
+        transform: scale(1.07);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Project Image */
+    .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* Project Button */
+    .project-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 16px;
+        background: linear-gradient(45deg, #06b6d4, #3b82f6);
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .project-btn:hover {
+        background: linear-gradient(45deg, #3b82f6, #06b6d4);
+        transform: scale(1.1);
+    }
+
+    /* Scroll Animation */
+    .project-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .project-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Contact Me */
+    /* Glassmorphism Card Effect */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        border-color: rgba(0, 255, 255, 0.5);
+    }
+
+    /* Neon Glow Effect */
+    .glass-card:hover {
+        box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.8);
+    }
+
+    /* Scroll Animation */
+    .glass-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .glass-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Input & Button Styling */
+    .contact-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+
+    .contact-btn {
+        background: linear-gradient(45deg, #06b6d4, #3b82f6);
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .contact-btn:hover {
+        background: linear-gradient(45deg, #3b82f6, #06b6d4);
+        transform: scale(1.05);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
